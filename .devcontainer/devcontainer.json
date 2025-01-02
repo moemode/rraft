@@ -1,0 +1,27 @@
+{
+    "name": "Rust Dev Container",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "extensions": [
+            "rust-lang.rust",
+            "matklad.rust-analyzer",
+            "github.copilot-chat",
+            "github.copilot"
+        ],
+        "settings": {
+            "editor.formatOnSave": true,
+            "[rust]": {
+                "editor.defaultFormatter": "rust-analyzer"
+            },
+            "editor.codeActionsOnSave": {
+                "source.organizeImports": true
+            },
+            "files.readonlyInclude": {
+                "**/.cargo/registry/src/**/*.rs": true,
+                "**/lib/rustlib/src/rust/library/**/*.rs": true
+            }
+        }
+    }
+}
